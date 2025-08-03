@@ -1,0 +1,156 @@
+{
+    "name_and_link": [
+        "Joel Jones J",
+        "https://github.com/Joel-Jones-J/"
+    ],
+    "designation": [
+        "CS Undergrad.",
+        "Flutter Developer."
+    ],
+    "resume_download_link": "https://drive.google.com/file/d/1v3i5FXYKiFFcvh-G_iftsH7N5WRQiK7V/view?usp=sharing",
+    "social_media": {
+        "1": [
+            "https://github.com/Joel-Jones-J/",
+            "github"
+        ],
+        "2": [
+            "https://www.linkedin.com/in/joel-jones-j-34bab324a/",
+            "linkedin"
+        ],
+        "3": [
+            "https://www.instagram.com/joel_jones_j/",
+            "instagram"
+        ],
+        "4": [
+            "mailto:joeljonesj@gmail.com",
+            "email"
+        ]
+    },
+    "contact_me": {
+        "location": "Madurai, Tamilnadu, India",
+        "open_for_opportunities": "Yes",
+        "picture": "picture.png"
+    },
+    "about": "A passionate Software Developer 🚀 | Open Source enthusiast 📝 | Maintainer 👷",
+    "bio": "I’m an engineering student with a strong passion for building impactful software solutions. In my leisure time, I actively contribute to open-source projects and engage with developer communities like Stack Overflow to both learn and assist others. I have hands-on experience with technologies such as Python, Node.js, Flutter, and Java, and have built several full-stack and cross-platform applications. Most of my projects are open-sourced and available on my GitHub, while a few are maintained as private repositories due to ongoing development or confidentiality.",
+    "what_i_do": {
+        "tools": [
+            "flutter.png",
+            "linux.png",
+            "c.png",
+            "cpp.png",
+            "java.png",
+            "python.png",
+            "flutterflow.png",
+            "git.png"
+        ],
+        "proficiency": [
+            "Flutter--70",
+            "C/C++/Java/Python--50",
+            "GNU/Linux--30",
+            "Git--55"
+        ]
+    },
+    "education": {
+        "1": {
+            "institute": "Kamaraj College of Engineering and Technology",
+            "location": "Virudhunagar",
+            "years": "2022 - 2026",
+            "description": "B.E in CSE",
+            "grades": "7.56 CGPA",
+            "logo": "kcet.png"
+        },
+        "2": {
+            "institute": "Rotary Laharry Matriculation Hr. Sec. School",
+            "location": "Madurai",
+            "years": "2020 - 2022",
+            "description": "Physics, Chemistry, Mathematics, Computer Science",
+            "grades": "80%",
+            "logo": "rlmhss.png"
+        },
+        "3": {
+            "institute": "Rotary Laharry Matriculation Hr. Sec. School",
+            "location": "Madurai",
+            "years": "2006 - 2020",
+            "description": "Secondary Education",
+            "grades":"Distinction",
+            "logo": "rlmhss1.png"
+        }
+    },
+    "experience": {
+        "1": {
+            "name": "Gateway Software Solutions",
+            "role": " Application Developer Intern",
+            "period": "June 2024 - July 2024",
+            "description": "Worked in application development team.",
+            "image_name": "gateway_software_solutions_logo.png"
+        },
+        "2": {
+            "name": "Shanruck Technologies",
+            "role": "Application Prototype Developer",
+            "period": "8 March 2025 - 27 April 2025",
+            "description": "Worked as a product prototype Developer.",
+            "image_name": "shanruck_technologies.png"
+        }
+        
+    },
+    "projects": {
+        "1": {
+            "name": "KCET SmartPass",
+            "tech_stack_used": "Flutter and Firebase",
+            "description": "KCET SmartPass is a campus pass management app for students to apply and track leave, outpass, and hostel pass approvals digitally.(In Development Stage)",
+            "general_or_github_link": "https://github.com/Joel-Jones-J"
+        },
+        "2": {
+            "name": "Med4Free",
+            "tech_stack_used": "Flutter and Firebase",
+            "description": "Med4Free is a donation-based platform that connects medicine donors with patients in need, enabling free access to unused, life-saving medicines.",
+            "general_or_github_link": "https://github.com/Joel-Jones-J/med4free"
+        },
+        "3": {
+            "name": "Clean Rail",
+            "tech_stack_used": "Flutter and Firebase",
+            "description": "Clean Rail is a digital inspection system for Indian Railways that streamlines station and train cleanliness audits with section-wise scoring, remarks, and automated PDF reports.",
+            "general_or_github_link": "https://github.com/Joel-Jones-J/Clean-Rail"
+        },
+        "4": {
+            "name": "Brain Tumor Detection",
+            "tech_stack_used": "TensorFlow, CNN, OpenCV, and MRI Brain Tumor Dataset.",
+            "description": "Brain Tumor Detection is a deep learning-based application that analyzes MRI scans to accurately identify and classify brain tumors, assisting in early diagnosis and treatment planning.",
+            "general_or_github_link": "https://github.com/Joel-Jones-J/Brain-Tumor-Detection"
+        },
+        "5": {
+            "name": "Dermo Detect",
+            "tech_stack_used": "Python, TensorFlow, CNN, OpenCV, and HAM10000 dataset",
+            "description": "Dermo Detect is a skin disease classification app that uses deep learning to identify dermatological conditions from images with high accuracy.(In Private Repo)",
+            "general_or_github_link": "https://github.com/Joel-Jones-J"
+        }
+        
+    },
+    "achievements": {
+        "1": {
+            "description": "Completed the Google Play Academy Digital Marketing Certification, focusing on app growth, user acquisition, and Play Store optimization.",
+            "link": "https://www.linkedin.com/posts/joel-jones-j-34bab324a_googleplay-certification-digitalmarketing-activity-7333892057662447617-xmUU?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD2-KSsBDwA6df6zY4XJNh1ivv9AOGY6FBA"
+        },
+        "2": {
+            "description": "Recognized as the Best Performer in Project Punch by Beehive Communication Club for outstanding public speaking, communication, and presentation skills.",
+            "link": "https://www.linkedin.com/posts/joel-jones-j-34bab324a_projectpunch-beehivecommunicationclub-communicationskills-activity-7334224668519813121-6zfd?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD2-KSsBDwA6df6zY4XJNh1ivv9AOGY6FBA"
+        },
+        "3": {
+            "description": "Currently developing ResQLink, a disaster relief and donation platform aimed at connecting donors with victims in real time to streamline aid distribution during emergencies in Tamil Nadu.",
+            "link": "https://www.linkedin.com/posts/joel-jones-j-34bab324a_resqlink-disasterrelief-tamilnadu-activity-7352735877879480320-aZ_P?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD2-KSsBDwA6df6zY4XJNh1ivv9AOGY6FBA"
+        },
+        "4": {
+            "description": "Solved 750+ programming problems on SkillRack, showcasing strong problem-solving abilities and consistent coding practice across various algorithmic challenges.",
+            "link": "https://www.skillrack.com/faces/resume.xhtml?id=400910&key=85632bb064df4828ae4436836d120aa72304be1a"
+        },
+        "5": {
+            "description": "Completed the CCNA: Introduction to Networks (Module 1) certification by Cisco, gaining foundational knowledge in networking concepts, IP addressing, and network protocols.",
+            "link": "https://www.credly.com/badges/5539869f-fee6-479e-9f7f-c44d4d1d9b20"
+        },
+        "6": {
+            "description": "Earned the Cisco Certified Ethical Hacker (Badge), showcasing foundational skills in ethical hacking, threat identification, and basic penetration testing techniques.",
+            "link": "https://www.credly.com/badges/b6ea22f2-fa8a-4116-a971-6f54f2fbf7f1"
+        }
+    }
+}
