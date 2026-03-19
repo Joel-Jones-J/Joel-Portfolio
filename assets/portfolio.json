@@ -1,11 +1,12 @@
 {
     "name_and_link": [
-        "Joel Jones J",
+        "Joel Jones",
         "https://github.com/Joel-Jones-J/"
     ],
     "designation": [
         "CS Undergrad.",
-        "Flutter Developer."
+        "Flutter Developer.",
+        "Android Developer."
     ],
     "resume_download_link": "https://drive.google.com/file/d/1v3i5FXYKiFFcvh-G_iftsH7N5WRQiK7V/view?usp=sharing",
     "social_media": {
@@ -36,6 +37,8 @@
     "what_i_do": {
         "tools": [
             "flutter.png",
+            "kotlin.png",
+            "jetpack.png",
             "linux.png",
             "c.png",
             "cpp.png",
@@ -46,6 +49,8 @@
         ],
         "proficiency": [
             "Flutter--70",
+            "Kotlin--60",
+            "Jetpack Compose--60",
             "C/C++/Java/Python--50",
             "GNU/Linux--30",
             "Git--55"
@@ -124,6 +129,12 @@
             "tech_stack_used": "Python, TensorFlow, CNN, OpenCV, and HAM10000 dataset",
             "description": "Dermo Detect is a skin disease classification app that uses deep learning to identify dermatological conditions from images with high accuracy.(In Private Repo)",
             "general_or_github_link": "https://github.com/Joel-Jones-J"
+        },
+        "6": {
+            "name": "Res-Q-Link",
+            "tech_stack_used": "Flutter and Firebase",
+            "description": "A disaster relief and donation platform aimed at connecting donors with victims in real time to streamline aid distribution during emergencies in Tamil Nadu.",
+            "general_or_github_link": ""
         }
         
     },
@@ -137,18 +148,14 @@
             "link": "https://www.linkedin.com/posts/joel-jones-j-34bab324a_projectpunch-beehivecommunicationclub-communicationskills-activity-7334224668519813121-6zfd?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD2-KSsBDwA6df6zY4XJNh1ivv9AOGY6FBA"
         },
         "3": {
-            "description": "Currently developing ResQLink, a disaster relief and donation platform aimed at connecting donors with victims in real time to streamline aid distribution during emergencies in Tamil Nadu.",
-            "link": "https://www.linkedin.com/posts/joel-jones-j-34bab324a_resqlink-disasterrelief-tamilnadu-activity-7352735877879480320-aZ_P?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD2-KSsBDwA6df6zY4XJNh1ivv9AOGY6FBA"
-        },
-        "4": {
             "description": "Solved 750+ programming problems on SkillRack, showcasing strong problem-solving abilities and consistent coding practice across various algorithmic challenges.",
             "link": "https://www.skillrack.com/faces/resume.xhtml?id=400910&key=85632bb064df4828ae4436836d120aa72304be1a"
         },
-        "5": {
+        "4": {
             "description": "Completed the CCNA: Introduction to Networks (Module 1) certification by Cisco, gaining foundational knowledge in networking concepts, IP addressing, and network protocols.",
             "link": "https://www.credly.com/badges/5539869f-fee6-479e-9f7f-c44d4d1d9b20"
         },
-        "6": {
+        "5": {
             "description": "Earned the Cisco Certified Ethical Hacker (Badge), showcasing foundational skills in ethical hacking, threat identification, and basic penetration testing techniques.",
             "link": "https://www.credly.com/badges/b6ea22f2-fa8a-4116-a971-6f54f2fbf7f1"
         }
