@@ -1,3 +1,4 @@
+import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'data.dart';
 
@@ -16,25 +17,21 @@ class MyName extends StatefulWidget {
 }
 
 class _MyNameState extends State<MyName> with SingleTickerProviderStateMixin {
-  late AnimationController _gradientController;
-  late Animation<double> _gradientAnim;
+  late AnimationController _controller;
   final String data = name();
 
   @override
   void initState() {
     super.initState();
-    _gradientController = AnimationController(
+    _controller = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 6),
+      duration: const Duration(seconds: 4),
     )..repeat();
-    _gradientAnim = Tween<double>(begin: 0.0, end: 1.0).animate(
-      CurvedAnimation(parent: _gradientController, curve: Curves.easeInOutSine),
-    );
   }
 
   @override
   void dispose() {
-    _gradientController.dispose();
+    _controller.dispose();
     super.dispose();
   }
 
@@ -43,31 +40,24 @@ class _MyNameState extends State<MyName> with SingleTickerProviderStateMixin {
     final double width = MediaQuery.of(context).size.width;
     final isDark = Theme.of(context).brightness == Brightness.dark;
     final colors = isDark
-        ? const [Color(0xFF00E5FF), Color(0xFFB388FF), Color(0xFFFF4081)]
-        : const [Color(0xFF6C63FF), Color(0xFFFF6584), Color(0xFFFFB347)];
+        ? const [Color(0xFF00E5FF), Color(0xFFB388FF), Color(0xFFFF4081), Color(0xFF00E5FF)]
+        : const [Color(0xFF6C63FF), Color(0xFFFF6584), Color(0xFFFFB347), Color(0xFF6C63FF)];
 
     return AnimatedBuilder(
-      animation: _gradientController,
+      animation: _controller,
       builder: (context, _) {
-        final t = _gradientAnim.value;
-        final begin = Alignment.lerp(
-          Alignment.topLeft,
-          Alignment.bottomRight,
-          t,
-        )!;
-        final end = Alignment.lerp(
-          Alignment.bottomRight,
-          Alignment.topLeft,
-          t,
-        )!;
+        final angle = _controller.value * 2 * math.pi;
+        final dx = math.sin(angle);
+        final dy = math.cos(angle);
 
         return Padding(
           padding: const EdgeInsets.symmetric(horizontal: 12.0),
           child: ShaderMask(
             shaderCallback: (bounds) => LinearGradient(
               colors: colors,
-              begin: begin,
-              end: end,
+              begin: Alignment(-dx, -dy),
+              end: Alignment(dx, dy),
+              stops: const [0.0, 0.35, 0.7, 1.0],
             ).createShader(bounds),
             child: widget.isMobile
                 ? _buildMobile(width)
