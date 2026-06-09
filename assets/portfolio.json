@@ -6,9 +6,10 @@
     "designation": [
         "CS Undergrad.",
         "Flutter Developer.",
+        "Full Stack Developer.",
         "Android Developer."
     ],
-    "resume_download_link": "https://drive.google.com/file/d/1v3i5FXYKiFFcvh-G_iftsH7N5WRQiK7V/view?usp=sharing",
+    "resume_download_link": "https://docs.google.com/document/d/1glxpELdyL_FT9wUraFB0QcIZHwKar4Yb/edit?usp=sharing&ouid=106231222333455141189&rtpof=true&sd=true",
     "social_media": {
         "1": [
             "https://github.com/Joel-Jones-J/",
@@ -38,6 +39,7 @@
         "tools": [
             "flutter.png",
             "kotlin.png",
+            "react.png",
             "jetpack.png",
             "linux.png",
             "c.png",
@@ -50,6 +52,7 @@
         "proficiency": [
             "Flutter--70",
             "Kotlin--60",
+            "react--50",
             "Jetpack Compose--60",
             "C/C++/Java/Python--50",
             "GNU/Linux--30",
@@ -96,6 +99,20 @@
             "period": "8 March 2025 - 27 April 2025",
             "description": "Worked as a product prototype Developer.",
             "image_name": "shanruck_technologies.png"
+        },
+        "3": {
+            "name": "Fly Towards Digital Innovation",
+            "role": "Fullstack Developer Intern",
+            "period": "December 2025 - April 2026",
+            "description": "Worked as an Android Developer Intern.",
+            "image_name": "flytowards.png"
+        },
+        "4": {
+            "name": "Fly Towards Digital Innovation",
+            "role": "Software Developer",
+            "period": "May 2026 - Present",
+            "description": "Working as a Mobile Application Developer.",
+            "image_name": "flytowards.png"
         }
         
     },
@@ -134,6 +151,18 @@
             "name": "Res-Q-Link",
             "tech_stack_used": "Flutter and Firebase",
             "description": "A disaster relief and donation platform aimed at connecting donors with victims in real time to streamline aid distribution during emergencies in Tamil Nadu.",
+            "general_or_github_link": ""
+        },
+        "7": {
+            "name": "Clara Miniatures",
+            "tech_stack_used": "React and MongoDB",
+            "description": "A modern e-commerce platform for women's fashion accessories, enabling seamless product discovery, secure purchasing, order tracking, and efficient inventory management through a responsive and user-friendly interface.",
+            "general_or_github_link": ""
+        },
+        "8": {
+            "name": "M.S. Madhan Furniture",
+            "tech_stack_used": "Flutter and Firebase",
+            "description": "Designed and developed a tailored business management solution for Windows and mobile platforms, enabling efficient management of inventory, customer interactions, sales orders, and operational workflows, improving productivity and business efficiency.",
             "general_or_github_link": ""
         }
         
