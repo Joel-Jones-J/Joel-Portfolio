@@ -2,6 +2,7 @@
 set -e
 
 echo "Installing Flutter..."
+rm -rf _flutter
 git clone https://github.com/flutter/flutter.git --depth 1 -b stable _flutter
 export PATH="$PATH:$(pwd)/_flutter/bin"
 
