@@ -21,17 +21,23 @@ List<List<String>> projects() {
   return totalProjects;
 }
 
+Future<String> _loadToken() async {
+  try {
+    return await rootBundle.loadString('dotenv');
+  } catch (_) {
+    return '';
+  }
+}
+
 Future<List<String>> starsAndForks(String repo) async {
-  final String loadDotenv = await rootBundle.loadString('dotenv');
+  final String token = await _loadToken();
   final List<String> words = repo.split('/');
   http.Response response;
-  if (loadDotenv.startsWith('ghp')) {
+  if (token.startsWith('ghp')) {
     response = await http.get(
       Uri.https('api.github.com',
           'repos/${words[words.length - 2]}/${words[words.length - 1]}'),
-      headers: {
-        'Authorization': 'Bearer $loadDotenv',
-      },
+      headers: {'Authorization': 'Bearer $token'},
     );
   } else {
     response = await http.get(
@@ -40,26 +46,21 @@ Future<List<String>> starsAndForks(String repo) async {
     );
   }
   final information = jsonDecode(response.body);
-
-  final List<String> starsForks = [
+  return [
     information['stargazers_count'].toString(),
     information['forks'].toString()
   ];
-
-  return starsForks;
 }
 
 Future<List<String>> github(String repo) async {
-  final String loadDotenv = await rootBundle.loadString('dotenv');
+  final String token = await _loadToken();
   final List<String> words = repo.split('/');
   http.Response response;
-  if (loadDotenv.startsWith('ghp')) {
+  if (token.startsWith('ghp')) {
     response = await http.get(
       Uri.https(
           'api.github.com', 'repos/danger-ahead/${words[words.length - 1]}'),
-      headers: {
-        'Authorization': 'Bearer $loadDotenv',
-      },
+      headers: {'Authorization': 'Bearer $token'},
     );
   } else {
     response = await http.get(
@@ -68,16 +69,14 @@ Future<List<String>> github(String repo) async {
     );
   }
   final information = jsonDecode(response.body);
-
-  final List<String> starsForks = [
-    information['full_name']
-        .toString()
-        .split('/')[information['full_name'].toString().split('/').length - 1],
+  final name = information['full_name']
+      .toString()
+      .split('/')[information['full_name'].toString().split('/').length - 1];
+  return [
+    name,
     information['language'].toString(),
     information['description'].toString(),
     information['stargazers_count'].toString(),
     information['forks'].toString()
   ];
-
-  return starsForks;
 }

@@ -12,6 +12,11 @@ class Introduction extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final color = isDark
+        ? const Color(0xFFEEF0FF).withOpacity(0.7)
+        : const Color(0xFF1A1A2E).withOpacity(0.6);
+
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 12.0),
       child: Text(
@@ -20,8 +25,9 @@ class Introduction extends StatelessWidget {
         style: TextStyle(
           fontFamily: 'SourceCodePro',
           letterSpacing: 2,
-          fontWeight: FontWeight.w500,
-          color: Theme.of(context).primaryColorLight,
+          fontWeight: FontWeight.w400,
+          color: color,
+          height: 1.1,
         ),
       ),
     );

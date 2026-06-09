@@ -15,8 +15,19 @@ class MyName extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final double width = MediaQuery.of(context).size.width;
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final gradient = isDark
+        ? const [Color(0xFF00E5FF), Color(0xFFB388FF), Color(0xFFFF4081)]
+        : const [Color(0xFF6C63FF), Color(0xFFFF6584), Color(0xFFFFB347)];
+
     return Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 12.0),
+      padding: const EdgeInsets.symmetric(horizontal: 12.0),
+      child: ShaderMask(
+        shaderCallback: (bounds) => LinearGradient(
+          colors: gradient,
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ).createShader(bounds),
         child: isMobile
             ? Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -28,23 +39,27 @@ class MyName extends StatelessWidget {
                       child: Text(
                         data.split(' ')[i],
                         textScaler: const TextScaler.linear(4.5),
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontFamily: 'FjallaOne',
-                          // letterSpacing: 10.5,
-                          fontWeight: FontWeight.w500,
-                          color: Theme.of(context).primaryColor,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600,
                         ),
                       ),
                     ),
                   );
-                }))
-            : Text(data,
+                }),
+              )
+            : Text(
+                data,
                 textScaler: const TextScaler.linear(7),
-                style: TextStyle(
+                style: const TextStyle(
                   fontFamily: 'FjallaOne',
-                  letterSpacing: 20.5,
-                  color: Theme.of(context).primaryColor,
-                  fontWeight: FontWeight.w500,
-                )));
+                  letterSpacing: 12,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+      ),
+    );
   }
 }

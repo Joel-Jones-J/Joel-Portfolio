@@ -2,22 +2,14 @@ import 'package:flutter/material.dart';
 
 import '../../tabs/tabs.dart';
 
-TextStyle textStyle(double fontSize, Color color) => TextStyle(
-      fontFamily: 'Montserrat',
-      fontSize: fontSize,
-      color: color,
-      fontWeight: FontWeight.bold,
-    );
-
-//The buttons in the top Nav Bar
 class UnderlinedButton extends StatefulWidget {
-  const UnderlinedButton(
-      {Key? key,
-      required this.context,
-      required this.btnName,
-      required this.btnNumber,
-      required this.tabNumber})
-      : super(key: key);
+  const UnderlinedButton({
+    Key? key,
+    required this.context,
+    required this.btnName,
+    required this.btnNumber,
+    required this.tabNumber,
+  }) : super(key: key);
 
   @override
   _UnderlinedButtonState createState() => _UnderlinedButtonState();
@@ -29,54 +21,63 @@ class UnderlinedButton extends StatefulWidget {
 
 class _UnderlinedButtonState extends State<UnderlinedButton> {
   bool _isHover = false;
+
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final accentColor = isDark
+        ? const Color(0xFF00E5FF)
+        : const Color(0xFF6C63FF);
+    final textColor = isDark ? const Color(0xFFEEF0FF) : const Color(0xFF1A1A2E);
+
     return InkWell(
-      borderRadius: BorderRadius.circular(5.0),
+      borderRadius: BorderRadius.circular(12),
       hoverColor: Colors.transparent,
       onTap: () => scroll.scrollTo(
-          index: widget.tabNumber,
-          duration: const Duration(milliseconds: 2000)),
-      onHover: (bool value) => setState(() => _isHover = value),
-      child: SizedBox(
-        width: MediaQuery.of(context).size.width * 0.13,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
+        index: widget.tabNumber,
+        duration: const Duration(milliseconds: 1000),
+        curve: Curves.easeInOutCubic,
+      ),
+      onHover: (v) => setState(() => _isHover = v),
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 300),
+        curve: Curves.easeOutCubic,
+        padding: EdgeInsets.symmetric(
+          horizontal: 14,
+          vertical: _isHover ? 6 : 4,
+        ),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(12),
+          color: _isHover ? accentColor.withOpacity(0.08) : Colors.transparent,
+          border: Border.all(
+            color: _isHover ? accentColor.withOpacity(0.3) : Colors.transparent,
+            width: 1,
+          ),
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
           children: [
-            Container(
-              alignment: Alignment.topRight,
-              child: Visibility(
-                visible: _isHover,
-                child: Container(
-                  height: MediaQuery.of(context).size.height * 0.004,
-                  width: MediaQuery.of(context).size.width * 0.045,
-                  decoration: BoxDecoration(
-                    color: Theme.of(context).primaryColor,
-                    borderRadius: BorderRadius.circular(50),
-                  ),
-                ),
+            AnimatedDefaultTextStyle(
+              duration: const Duration(milliseconds: 200),
+              style: TextStyle(
+                fontSize: 10,
+                fontFamily: 'SourceCodePro',
+                color: _isHover ? accentColor : textColor.withOpacity(0.5),
+                fontWeight: FontWeight.w600,
               ),
+              child: Text(widget.btnNumber),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(widget.btnNumber,
-                    style: textStyle(11, Theme.of(context).primaryColorLight)),
-                Text(widget.btnName,
-                    style: textStyle(15, Theme.of(context).primaryColor)),
-              ],
-            ),
-            Visibility(
-              visible: _isHover,
-              child: Container(
-                height: MediaQuery.of(context).size.height * 0.004,
-                width: MediaQuery.of(context).size.width * 0.045,
-                decoration: BoxDecoration(
-                  color: Theme.of(context).primaryColor,
-                  borderRadius: BorderRadius.circular(50),
-                ),
+            const SizedBox(width: 4),
+            AnimatedDefaultTextStyle(
+              duration: const Duration(milliseconds: 200),
+              style: TextStyle(
+                fontSize: 14,
+                fontFamily: 'Montserrat',
+                color: _isHover ? accentColor : textColor,
+                fontWeight: _isHover ? FontWeight.w700 : FontWeight.w500,
+                letterSpacing: 0.5,
               ),
+              child: Text(widget.btnName),
             ),
           ],
         ),

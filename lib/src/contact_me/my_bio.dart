@@ -12,25 +12,34 @@ class MyBio extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return (getBio == '')
-        ? const Center()
-        : Padding(
-            padding: const EdgeInsets.fromLTRB(12.0, 5.0, 12.0, 30.0),
-            child: Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 30.0),
-                  child: Text(
-                    '"$getBio"',
-                    style: TextStyle(
-                        fontFamily: 'SourceCodePro',
-                        letterSpacing: 2,
-                        color: Theme.of(context).primaryColorLight,
-                        fontSize: fontSize),
-                  ),
-                ),
-              ],
-            ),
-          );
+    if (getBio == '') return const SizedBox.shrink();
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(0, 8, 0, 16),
+      child: Container(
+        padding: const EdgeInsets.all(14),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(12),
+          color: Theme.of(context).brightness == Brightness.dark
+              ? const Color(0xFF00E5FF).withOpacity(0.05)
+              : const Color(0xFF6C63FF).withOpacity(0.05),
+          border: Border.all(
+            color: Theme.of(context).brightness == Brightness.dark
+                ? const Color(0xFF00E5FF).withOpacity(0.1)
+                : const Color(0xFF6C63FF).withOpacity(0.1),
+          ),
+        ),
+        child: Text(
+          '"$getBio"',
+          style: TextStyle(
+            fontFamily: 'SourceCodePro',
+            letterSpacing: 1.5,
+            color: Theme.of(context).primaryColorLight.withOpacity(0.7),
+            fontSize: fontSize,
+            height: 1.5,
+            fontStyle: FontStyle.italic,
+          ),
+        ),
+      ),
+    );
   }
 }
